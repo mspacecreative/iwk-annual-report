@@ -118,12 +118,17 @@ header {
 }
 
 .reveal header {
-	transform: translateX(-200px);
+	transform: translateX(-250px);
 	transition: all 0.5s ease-in-out;
 }
 
 header.shrink {
 	padding: 10px 0;
+}
+
+.max-1080 {
+	max-width: 1080px;
+	margin: auto;
 }
 
 .logo {
@@ -142,7 +147,7 @@ header.shrink {
 }
 
 .inner {
-	max-width: 1080px;
+	/*max-width: 1080px;*/
 	margin: auto;
 	width: 90%;
 	position: relative;
@@ -154,6 +159,7 @@ section {
 
 header .inner {
 	font-size: 0;
+	max-width: none;
 }
 
 .site-title {
@@ -178,8 +184,8 @@ header .inner {
 
 nav {
 	position: fixed;
-	transform: translateX(200px);
-	width: 200px;
+	transform: translateX(250px);
+	width: 250px;
 	height: 100%;
 	right: 0;
 	top: 0;
@@ -194,11 +200,16 @@ nav ul {
 }
 
 nav li {
-	margin: 0 0 10px;
+	margin: 0 0 20px;
 }
 
 nav a {
 	text-decoration: none;
+	color: #666;
+}
+
+nav a:focus {
+	outline: none;
 }
 
 .reveal nav {
@@ -275,13 +286,41 @@ nav a {
     top: 16px;
 }
 
+.reveal #nav-icon span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.reveal #nav-icon span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.reveal #nav-icon span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms--o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.reveal #nav-icon span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
 .wrap {
 	transition: all 0.5s ease-in-out;
 	overflow-x: hidden;
 }
 
 .reveal .wrap {
-	transform: translateX(-200px);
+	transform: translateX(-250px);
 	transition: all 0.5s ease-in-out;
 }
 
@@ -371,8 +410,12 @@ body p:last-of-type {
 	background-color: #0167A5;
 }
 
-.content-box.magenta {
+.content-box.magenta, .cta-button.magenta-bg {
 	background-color: #B93293;
+}
+
+.cta-button.magenta-bg {
+	bottom: 100px;
 }
 
 .position-bottom {
@@ -471,6 +514,7 @@ footer {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 25px;
+	font-family: 'Roboto Slab', serif;
 }
 
 #governance {
@@ -812,6 +856,7 @@ img {
  
  .links {
  	border: 1px solid #fff;
+ 	text-align: center;
  }
  
  /* ==========================================================================
@@ -824,8 +869,8 @@ img {
     
 @media (min-width: 981px) {
 	.one_third {
-		width: 48%;
-		flex-basis: 48%;
+		width: 51%;
+		flex-basis: 51%;
 	}
 	
 	.one_third:first-child {
@@ -853,8 +898,8 @@ img {
 	}
 	
 	.one_third:nth-child(3n) {
-		width: 31%;
-		flex-basis: 31%;
+		width: 28%;
+		flex-basis: 28%;
 		margin-right: 0;
 	}
 	
