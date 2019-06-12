@@ -1140,6 +1140,16 @@ button {
 	.logo img {
 		width: 70px;
 	}
+	
+	.our-team-window p {
+		top: auto;
+		transform: none;
+		left: auto;
+		width: 100%;
+		padding: 0 25px;
+		position: relative;
+		display: none;
+	}
 
 	#infographicsFieldlist li {
 		width: 48%;
