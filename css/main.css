@@ -342,7 +342,6 @@ video, iframe {
 	display: flex;
 	flex-basis: 100%;
 	flex-direction: row;
-	flex-wrap: wrap;
 }
 
 .layout-container h2 {
