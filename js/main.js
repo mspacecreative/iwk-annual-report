@@ -135,7 +135,7 @@ $(document).ready(function() {
 			$(this).toggleClass('reveal');
 		});
 	} else {
-		$('.our-team-window').on('touch', function () {
+		$('.our-team-window').on('click touchstart', function () {
 			$(this).toggleClass('reveal');
 		});
 	}
