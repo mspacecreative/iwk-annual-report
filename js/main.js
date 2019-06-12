@@ -135,9 +135,12 @@ $(document).ready(function() {
 			$(this).toggleClass('reveal');
 		});
 	} else {
-		$('.our-team-window').on('click touch', function () {
+		$('.our-team-container').find('.our-team-window').on('click touch', function () {
+			$(this).next().removeClass('reveal');
 			$(this).toggleClass('reveal');
-			$('.our-team-window').not($(this).next()).removeClass('reveal');
+			$('.our-team-window').not(this).each(function() {
+				$(this).removeClass('reveal');
+			});
 		});
 	}
 
