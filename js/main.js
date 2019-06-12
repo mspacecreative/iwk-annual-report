@@ -136,8 +136,7 @@ $(document).ready(function() {
 				$(this).toggleClass('reveal');
 			});
 		} else {
-			$('.our-team-container').find('.our-team-window').on('click touch', function (e) {
-				e.preventDefault();
+			$('.our-team-container').find('.our-team-window').on('click touch', function () {
 				$(this).next().removeClass('reveal');
 				$(this).toggleClass('reveal');
 				$(this).next().children('p').slideUp();
@@ -154,14 +153,6 @@ $(document).ready(function() {
 	$(document).ready(function () {
 		checkStyle();
 		$(window).resize(checkStyle);
-	});
-	
-	// REFRESH PAGE ON WINDOW RESIZE
-	$(window).bind('resize', function(e) {
-		if (window.RT) clearTimeout(window.RT);
-		window.RT = setTimeout(function() {
-	    this.location.reload(false);
-		});
 	});
 
 })(jQuery);
