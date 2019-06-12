@@ -1104,7 +1104,7 @@ img {
 		flex-basis: 50%;
 	}
 	.two_fifths {
-		height: 1000px;
+		height: 1000px!important;
 		align-self: center;
 	}
 }
