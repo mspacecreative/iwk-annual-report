@@ -131,6 +131,12 @@ header.shrink {
 	margin: auto;
 }
 
+.max-1600 {
+	max-width: 1600px;
+	margin: auto;
+	position: relative;
+}
+
 .logo {
 	float: left;
 }
@@ -351,8 +357,9 @@ video, iframe {
 .leadership {
 	background-image: url(../img/leadership-message-portrait.jpg);
 	background-size: cover;
-	background-position: center;
-	width: 100%;
+	background-position: top center;
+	align-self: center;
+	height: 600px;
 }
 
 .top-bottom-padding {
@@ -531,14 +538,14 @@ footer {
 
 .absolute-positioned-content_bottom {
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 	bottom: 0;
 	width: 100%;
 }
 
 .absolute-positioned-content_top {
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 	top: 0;
 	width: 100%;
 }
@@ -631,6 +638,14 @@ footer {
 	flex-basis: 50%;
 }
 
+.orange-text {
+	color: #ED965C;
+}
+
+.magenta-text {
+	color: #B93293;
+}
+
 .our-team-window:before {
 	position: absolute;
 	top: 0;
@@ -645,12 +660,6 @@ footer {
 }
 
 .our-team-window.reveal:before {
-	opacity: 1;
-	visibility: visible;
-	transition: all 0.5s ease-in-out;
-}
-
-.our-team-window:hover:before {
 	opacity: 1;
 	visibility: visible;
 	transition: all 0.5s ease-in-out;
@@ -682,15 +691,14 @@ footer {
 	transition: all 0.5s ease-in-out;
 }
 
-.our-team-window:hover > p {
+.our-team-window.reveal p, .our-team-window.reveal h3 {
 	opacity: 1;
 	visibility: visible;
 	transition: all 0.5s ease-in-out;
 }
 
-.our-team-window:hover > h3 {
+.our-team-window.reveal h3 {
 	background-color: transparent;
-	transition: all 0.5s ease-in-out;
 }
 
 img {
@@ -866,6 +874,118 @@ img {
     ========================================================================== */
     
 /* ==========================================================================
+   GOVERNANCE SLIDEOUT
+   ========================================================================== */
+    
+.governance-slideout .one_third {
+	width: 33%;
+	float: left;
+	margin-right: 5%;
+}
+
+.governance-slideout .one_third.last_column {
+	margin-right: 0;
+}
+.one_third:first-child {
+	width: 11%;
+}
+.governance-slideout .one_third:first-child {
+	width: 20%;
+}
+
+.governance-slideout {
+	position: fixed;
+	right: -100%;
+	top: 0;
+	transition: all 0.5s ease-in-out;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	z-index: 300;
+	background: #fff url(images/white_carbon_@2X.png);
+	-webkit-overflow-scrolling: touch;
+	text-align: left;
+	visibility: hidden;
+}
+
+.governance-slideout p {
+	font-size: 14px;
+}
+
+.governance-slideout ul {
+	padding-left: 20px;
+}
+
+.governance-slideout .inner {
+	padding: 50px 8%;
+}
+
+.governance-slideout.view {
+	transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-webkit-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	visibility: visible;
+}
+
+button {
+	background: none;
+	font-family: 'Poppins', sans-serif;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	display: block;
+	padding: 0;
+	line-height: inherit;
+}
+
+.governance-slideout h3 {
+	margin: 0;
+	font-size: 22px;
+	color: #0082c8;
+}
+
+.governance-slideout .one_third ul {
+	margin-top:15px;
+}
+
+.governance-slideout .one_third.last_column p {
+	font-style:italic;
+	margin-bottom:0;
+}
+
+.governance-slideout li {
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.slideout-close {
+	position: absolute;
+	right: 25px;
+	top: 20px;
+	font-size: 35px;
+	padding: 0;
+	font-weight:bold;
+}
+
+.slideout-close:hover {
+	color:#D32F2F;
+}
+
+.slideout-close span {
+	display: none;
+}
+
+/* ==========================================================================
+   END GOVERNANCE SLIDEOUT
+   ========================================================================== */
+    
+/* ==========================================================================
    RESPONSIVE STYLES
    ========================================================================== */
     
@@ -967,6 +1087,33 @@ img {
 	.our-team-window p {
 		font-size: 13px;
 	}
+	#leadership .three_fifths {
+		position: relative;
+		top: -220px;
+		width: 90%;
+		padding: 5% 5% 50px;
+		margin: 0 auto -220px;
+		background-color: #fff;
+	}
+	.absolute-positioned-content_bottom, .absolute-positioned-content_top {
+	    position: relative;
+	    z-index: 1;
+	    bottom: auto;
+	    width: 100%;
+	    top: -130px;
+	    margin: 0 auto -130px;
+	}
+	.two_fifths {
+		width: 100%;
+		float: none;
+		flex-basis: 100%;
+	}
+	.layout-container {
+		flex-wrap: wrap;
+	}
+	.leadership {
+		height: 400px;
+	}
 }
 
 @media (max-width: 450px) {
@@ -993,17 +1140,7 @@ img {
 	.logo img {
 		width: 70px;
 	}
-	.two_fifths {
-		width: 100%;
-		float: none;
-		flex-basis: 100%;
-	}
-	.layout-container {
-		flex-wrap: wrap;
-	}
-	.leadership {
-		height: 400px!important;
-	}
+
 	#infographicsFieldlist li {
 		width: 48%;
 		flex-basis: 48%;
@@ -1040,22 +1177,6 @@ img {
 	.shrink .logo img {
 		width: 50px;
 	}
-	#leadership .three_fifths {
-		position: relative;
-		top: -220px;
-		width: 90%;
-		padding: 5% 5% 50px;
-		margin: 0 auto -220px;
-		background-color: #fff;
-	}
-	.absolute-positioned-content_bottom, .absolute-positioned-content_top {
-	    position: relative;
-	    z-index: 1;
-	    bottom: auto;
-	    width: 100%;
-	    top: -130px;
-	    margin: 0 auto -130px;
-	}
 	.right-bottom, .right-top {
 		float: none;
 	}
@@ -1068,11 +1189,9 @@ img {
 	}
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1366px) {
 	.leadership {
-		background-position: top center;
 		height: 600px!important;
-		align-self: center;
 	}
 }
 
@@ -1118,6 +1237,29 @@ img {
 	}
 	.max-500, .max-800 {
 		max-width: none;
+	}
+}
+
+@media (min-width: 1600px) {
+	.moment .max-1600:before {
+		background-image: linear-gradient(270deg, rgba(255,255,255,1), rgba(255,255,255,.5), rgba(255,255,255,0));
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 150px;
+		z-index: 1;
+		content: '';
+	}
+	.moment .max-1600:after {
+		background-image: linear-gradient(90deg, rgba(255,255,255,1), rgba(255,255,255,.5), rgba(255,255,255,0));
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 150px;
+		z-index: 1;
+		content: '';
 	}
 }
 

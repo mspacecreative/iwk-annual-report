@@ -30,14 +30,14 @@ $(document).ready(function() {
 		$('body').toggleClass('reveal');
 	});
 	
-	$('.our-team-window').click(function() {
+	/*$('.our-team-window').click(function() {
 		$(this).toggleClass('reveal');
 		if ( $(this).hasClass('reveal') ) {
 			$(this).children('p').fadeIn();
 		} else {
 			$(this).children('p').fadeOut();
 		}
-	});
+	});*/
 	
 	// HEADER SHRINK ON SCROLL
 	function headerAdjust() {
@@ -70,7 +70,7 @@ $(document).ready(function() {
 	
 	/*function equalColumns() {
 		// EQUALIZE COLUMNS
-		$('.equalize').height($('.target_height').outerHeight());
+		$('.equalize').height($('.target_height').height() - $('.orange-text').height());
 	}
 	
 	// DOC READY
@@ -82,6 +82,15 @@ $(document).ready(function() {
 	$(window).resize(function () {
 		equalColumns();
 	});*/
+	
+	// GOVERNANCE SLIDEOUT
+	$('.view-list-button').click(function() {
+		$('.governance-slideout').toggleClass('view');
+	});
+	
+	$('.slideout-close').click(function() {
+		$('.governance-slideout').toggleClass('view');
+	});
 	
 	// ACCORDION FUNCTIONALITY
 	$('.accordion-container').find('.question').click(function(){
@@ -101,5 +110,30 @@ $(document).ready(function() {
 		dots: true,
 		arrows: true,
 	});
+	
+	// CONTROL VIDEO PLAY
+	$(window).scroll(function(e)
+	  {
+	    var offsetRange = $(window).height() / 3,
+	        offsetTop = $(window).scrollTop() + offsetRange + $("video").outerHeight(true),
+	        offsetBottom = offsetTop + offsetRange;
+	
+	    $("video").each(function () { 
+	      var y1 = $(this).offset().top;
+	      var y2 = offsetTop;
+	      if (y1 + $(this).outerHeight(true) < y2 || y1 > offsetBottom) {
+	        this.play(); 
+	      } else {
+	        this.pause();
+	      }
+	    });
+	});
+	
+	// OUR TEAM HOVER STATES
+	if ($('#achievements h1').css('text-align') == 'right' ) {
+		$('.our-team-window').hover(function () {
+			$(this).toggleClass('reveal');
+		});
+	}
 
 })(jQuery);
