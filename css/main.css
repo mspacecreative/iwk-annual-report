@@ -361,7 +361,7 @@ video, iframe {
 }
 
 .full-padding {
-	padding: 50px;
+	padding: 5%;
 }
 
 .bottom-padding {
@@ -923,7 +923,7 @@ img {
 	}
 	
 	.three_fifths {
-		width: 60%;
+		width: 50%;
 		float: left;
 		flex-basis: 60%;
 		flex-direction: column;
