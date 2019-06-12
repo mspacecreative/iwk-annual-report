@@ -688,13 +688,11 @@ footer {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	width: 75%;
-	transition: all 0.5s ease-in-out;
 }
 
 .our-team-window.reveal p, .our-team-window.reveal h3 {
 	opacity: 1;
 	visibility: visible;
-	transition: all 0.5s ease-in-out;
 }
 
 .our-team-window.reveal h3 {
