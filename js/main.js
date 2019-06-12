@@ -130,21 +130,37 @@ $(document).ready(function() {
 	});
 	
 	// OUR TEAM HOVER STATES
-	if ($('#achievements h1').css('text-align') == 'right' ) {
-		$('.our-team-window').hover(function () {
-			$(this).toggleClass('reveal');
-		});
-	} else {
-		$('.our-team-container').find('.our-team-window').on('click touch', function () {
-			$(this).next().removeClass('reveal');
-			$(this).toggleClass('reveal');
-			$(this).next().children('p').slideUp();
-			$(this).children('p').slideToggle();
-			$('.our-team-window').not(this).each(function() {
-				$(this).removeClass('reveal');
-				$(this).children('p').slideUp();
+	function checkStyle() {
+		if ($('.our-team-container').css('position') == 'relative' ) {
+			$('.our-team-window').hover(function () {
+				$(this).toggleClass('reveal');
 			});
-		});
+		} else {
+			$('.our-team-container').find('.our-team-window').on('click touch', function () {
+				$(this).next().removeClass('reveal');
+				$(this).toggleClass('reveal');
+				$(this).next().children('p').slideUp();
+				$(this).children('p').slideToggle();
+				$('.our-team-window').not(this).each(function() {
+					$(this).removeClass('reveal');
+					$(this).children('p').slideUp();
+				});
+			});
+		}
 	}
+	
+	// DOC READY
+	$(document).ready(function () {
+		checkStyle();
+		$(window).resize(checkStyle);
+	});
+	
+	// REFRESH PAGE ON WINDOW RESIZE
+	$(window).bind('resize', function(e) {
+		if (window.RT) clearTimeout(window.RT);
+		window.RT = setTimeout(function() {
+	    this.location.reload(false);
+		});
+	});
 
 })(jQuery);

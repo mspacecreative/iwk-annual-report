@@ -110,7 +110,7 @@ header {
 	background-color: #B93293;
 	padding: 15px 0;
 	position: fixed;
-	z-index: 10;
+	z-index: 99;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -669,7 +669,7 @@ footer {
 	padding: 15px 20px;
 	background-color: rgba(22, 111, 164, .35);
 	color: #fff;
-	margin: 50px auto 0;
+	margin: 35px auto 0;
 	display: inline-block;
 	font-family: 'Roboto Slab', serif;
 	font-size: 30px;
@@ -684,10 +684,11 @@ footer {
 	visibility: hidden;
 	position: absolute;
 	color: #fff;
-	top: 50%;
+	top: 120px;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translateX(-50%);
 	width: 75%;
+	font-size: 14px;
 }
 
 .our-team-window.reveal p, .our-team-window.reveal h3 {
@@ -867,6 +868,10 @@ img {
  	text-align: center;
  }
  
+ footer img {
+ 	max-width: 150px;
+ }
+ 
  /* ==========================================================================
     END ACCORDION
     ========================================================================== */
@@ -884,7 +889,7 @@ img {
 .governance-slideout .one_third.last_column {
 	margin-right: 0;
 }
-.one_third:first-child {
+.governance-slideout .one_third:first-child {
 	width: 11%;
 }
 .governance-slideout .one_third:first-child {
@@ -900,7 +905,7 @@ img {
 	height: 100%;
 	overflow: auto;
 	z-index: 300;
-	background: #fff url(images/white_carbon_@2X.png);
+	/*background: #fff url(images/white_carbon_@2X.png);*/
 	-webkit-overflow-scrolling: touch;
 	text-align: left;
 	visibility: hidden;
@@ -1079,6 +1084,12 @@ button {
 	#achievements h1 {
 		margin-bottom: 25px;
 	}
+	footer .one_third {
+		margin-bottom: 25px;
+	}
+	footer .one_third:last-of-type {
+		margin-bottom: 0;
+	}
 	.question {
 		font-size: 17px;
 	}
@@ -1118,6 +1129,9 @@ button {
 	body h2 {
 		font-size: 28px;
 	}
+	.cta-button.magenta-bg {
+		bottom: 0;
+	}
 }
 
 @media (max-width: 767px) {
@@ -1125,6 +1139,24 @@ button {
 		width: 100%;
 		float: none;
 		flex-basis: 100%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.our-team-container.max-1600 {
+		position: static;
+	}
+	.our-team-window p {
+		top: auto;
+		transform: none;
+		left: auto;
+		width: 100%;
+		padding: 0 25px;
+		position: relative;
+		display: none;
+	}
+	.our-team-window.reveal {
+		padding-bottom: 50px;
 	}
 }
 
@@ -1137,16 +1169,6 @@ button {
 @media (max-width: 768px) {
 	.logo img {
 		width: 70px;
-	}
-	
-	.our-team-window p {
-		top: auto;
-		transform: none;
-		left: auto;
-		width: 100%;
-		padding: 0 25px;
-		position: relative;
-		display: none;
 	}
 
 	#infographicsFieldlist li {
