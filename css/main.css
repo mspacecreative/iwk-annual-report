@@ -956,17 +956,6 @@ img {
 	}
 }
 
-@media (max-width: 1024px) {
-	.two_fifths, .three_fifths {
-		width: 50%;
-		flex-basis: 50%;
-	}
-	.two_fifths {
-		height: 1000px!important;
-		align-self: center;
-	}
-}
-
 @media (max-width: 980px) {
 	#achievements h1 {
 		margin-bottom: 25px;
@@ -980,20 +969,8 @@ img {
 }
 
 @media (max-width: 450px) {
-	.leadership {
-		height: 400px!important;
-	}
 	body h2 {
 		font-size: 28px;
-	}
-}
-
-@media (min-width: 768px) {
-	.our-team-window {
-		width: 50%;
-		float: left;
-		flex-basis: 50%;
-		flex-direction: column;
 	}
 }
 
@@ -1014,6 +991,9 @@ img {
 @media (max-width: 768px) {
 	.logo img {
 		width: 70px;
+	}
+	.leadership {
+		height: 400px!important;
 	}
 	#infographicsFieldlist li {
 		width: 48%;
@@ -1079,9 +1059,46 @@ img {
 	}
 }
 
+@media (min-width: 768px) {
+	.our-team-window {
+		width: 50%;
+		float: left;
+		flex-basis: 50%;
+		flex-direction: column;
+	}
+	.leadership {
+		background-position: top center;
+		height: 600px!important;
+		align-self: center;
+	}
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+	.leadership {
+		background-position: top center;
+		height: 700px!important;
+		align-self: center;
+	}
+}
+
 @media (max-width: 812px) and (orientation: landscape) {
 	.logo img {
 		width: 70px;
+	}
+	#leadership .three_fifths {
+	    position: relative;
+	    top: -220px;
+	    width: 90%;
+	    padding: 5% 5% 50px;
+	    margin: 0 auto -220px;
+	    background-color: #fff;
+	}
+	.leadership {
+		height: 500px!important;
+		background-position: top center;
+	}
+	body h2 {
+		font-size: 28px;
 	}
 	.site-title {
 		position: absolute;
