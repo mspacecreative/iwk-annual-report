@@ -138,8 +138,8 @@ $(document).ready(function() {
 		$('.our-team-container').find('.our-team-window').on('click touch', function () {
 			$(this).next().removeClass('reveal');
 			$(this).toggleClass('reveal');
-			$(this).next().children('p').slideToggle();
-			$(this).children('p').slideDown();
+			$(this).next().children('p').slideUp();
+			$(this).children('p').slideToggle();
 			$('.our-team-window').not(this).each(function() {
 				$(this).removeClass('reveal');
 				$(this).children('p').slideUp();
