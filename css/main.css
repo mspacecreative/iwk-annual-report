@@ -1085,6 +1085,10 @@ body.menu .overlay {
 		flex-basis: 51%;
 	}
 	
+	#governance h2 {
+		font-size: 70px;
+	}
+	
 	.one_third:first-child {
 	    width: 11%;
 		flex-basis: 11%;
