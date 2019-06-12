@@ -206,6 +206,7 @@ nav li {
 nav a {
 	text-decoration: none;
 	color: #666;
+	display: block;
 }
 
 nav a:focus {
@@ -993,9 +994,26 @@ img {
 	}
 }
 
+@media (min-width: 769px) {
+	#infographicsFieldList li:nth-last-child(-n+5) {
+	    margin-bottom: 0;
+	}
+}
+
 @media (max-width: 768px) {
 	.logo img {
 		width: 70px;
+	}
+	#infographicsFieldlist li {
+		width: 48%;
+		flex-basis: 48%;
+		margin-right: 4%;
+	}
+	#infographicsFieldlist li:nth-child(5n) {
+		margin-right: 4%;
+	}
+	#infographicsFieldlist li:nth-child(2n) {
+		margin-right: 0;
 	}
 	.site-title {
 		position: absolute;
