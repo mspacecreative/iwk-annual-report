@@ -137,7 +137,7 @@ $(document).ready(function() {
 			});
 		} else {
 			$('.our-team-container').find('.our-team-window').on('click touch', function () {
-				$(this).next().removeClass('reveal');
+				$(this).next().toggleClass('reveal');
 				$(this).toggleClass('reveal');
 				$(this).next().children('p').slideUp();
 				$(this).children('p').slideToggle();
