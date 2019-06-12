@@ -21,6 +21,10 @@ $(document).ready(function() {
 		window.site.pluginsController.aos.refresh();
 	});
 	
+});
+	
+(function ($) {
+	
 	// MOBILE NAVIGATION TOGGLE
 	$('.toggle').click(function() {
 		$('body').toggleClass('reveal');
@@ -35,9 +39,6 @@ $(document).ready(function() {
 		}
 	});
 	
-	// EQUALIZE COLUMNS
-	$('.equalize').css('height', $('.target_height').outerHeight());
-	
 	// HEADER SHRINK ON SCROLL
 	function headerAdjust() {
 		if ($(this).scrollTop() > 200) {
@@ -48,7 +49,7 @@ $(document).ready(function() {
 	}
 	
 	// WINDOW SCROLL
-	$(window).scroll(function() {
+	$(window).scroll(function () {
 		headerAdjust();
 	});
 	
@@ -67,6 +68,21 @@ $(document).ready(function() {
 	  }
 	});
 	
+	/*function equalColumns() {
+		// EQUALIZE COLUMNS
+		$('.equalize').height($('.target_height').outerHeight());
+	}
+	
+	// DOC READY
+	$(document).ready(function () {
+		equalColumns();
+	});
+	
+	// WINDOW RESIZE
+	$(window).resize(function () {
+		equalColumns();
+	});*/
+	
 	// ACCORDION FUNCTIONALITY
 	$('.accordion-container').find('.question').click(function(){
 	    $(this).next().slideToggle();
@@ -84,6 +100,6 @@ $(document).ready(function() {
 	    autoplay: true,
 		dots: true,
 		arrows: true,
-	 });
-	
-});
+	});
+
+})(jQuery);
