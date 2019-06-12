@@ -136,7 +136,8 @@ $(document).ready(function() {
 				$(this).toggleClass('reveal');
 			});
 		} else {
-			$('.our-team-container').find('.our-team-window').on('click touch', function () {
+			$('.our-team-container').find('.our-team-window').on('click touch', function (e) {
+				e.preventDefault();
 				$(this).next().removeClass('reveal');
 				$(this).toggleClass('reveal');
 				$(this).next().children('p').slideUp();
