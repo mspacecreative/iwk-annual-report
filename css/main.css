@@ -991,6 +991,14 @@ img {
 	.logo img {
 		width: 70px;
 	}
+	.two_fifths {
+		width: 100%;
+		float: none;
+		flex-basis: 100%;
+	}
+	.layout-container {
+		flex-wrap: wrap;
+	}
 	.leadership {
 		height: 400px!important;
 	}
@@ -1059,23 +1067,9 @@ img {
 }
 
 @media (min-width: 768px) {
-	.our-team-window {
-		width: 50%;
-		float: left;
-		flex-basis: 50%;
-		flex-direction: column;
-	}
 	.leadership {
 		background-position: top center;
 		height: 600px!important;
-		align-self: center;
-	}
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-	.leadership {
-		background-position: top center;
-		height: 700px!important;
 		align-self: center;
 	}
 }
