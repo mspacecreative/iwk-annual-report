@@ -134,6 +134,10 @@ $(document).ready(function() {
 		$('.our-team-window').hover(function () {
 			$(this).toggleClass('reveal');
 		});
+	} else {
+		$('.our-team-window').on('touch', function () {
+			$(this).toggleClass('reveal');
+		});
 	}
 
 })(jQuery);
