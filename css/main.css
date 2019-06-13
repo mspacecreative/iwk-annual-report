@@ -1289,6 +1289,9 @@ body.menu .overlay {
 	#achievements h1 {
 		margin-bottom: 25px;
 	}
+	.flex-container {
+		flex-wrap: wrap;
+	}
 	.absolute-positioned-content_top, .absolute-positioned-content_bottom {
 	    position: relative;
 	    z-index: 1;
