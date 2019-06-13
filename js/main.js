@@ -148,13 +148,6 @@ $(document).ready(function() {
 		}
 	}
 	
-	$(window).bind('resize', function(e)
-	{
-	  console.log('window resized..');
-	  this.location.reload(false); /* false to get page from cache */
-	  /* true to fetch page from server */
-	});
-	
 	/*function checkStyle() {
 		if (window.matchMedia("(max-width: 1024px)").matches) {
 			$('.our-team-container').find('.our-team-window').on('click', function () {
@@ -171,7 +164,14 @@ $(document).ready(function() {
 				$(this).toggleClass('reveal');
 			});
 		}
-	}*/
+	}
+	
+	$(window).bind('resize', function(e)
+	{
+	  console.log('window resized..');
+	  this.location.reload(false); /* false to get page from cache */
+	  /* true to fetch page from server */
+	});*/
 	
 	// DOC READY
 	$(document).ready(function () {
