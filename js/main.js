@@ -170,7 +170,7 @@ $(document).ready(function() {
 	{
 	  console.log('window resized..');
 	  this.location.reload(false); /* false to get page from cache */
-	  /* true to fetch page from server */
+	  /* true to fetch page from server
 	});*/
 	
 	// DOC READY
