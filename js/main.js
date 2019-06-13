@@ -98,9 +98,9 @@ $(document).ready(function() {
 	    $(this).next().slideToggle();
 	    $(this).toggleClass('switch');
 	    $(".answer").not($(this).next()).slideUp();
-	    $(this).find('.fas').toggleClass('rotate');
+	    $(this).find('.fa').toggleClass('rotate');
 	    $('.question').not(this).each(function() {
-	    	$(this).find('.fas').removeClass('rotate');
+	    	$(this).find('.fa').removeClass('rotate');
 	    	$(this).removeClass('switch');
 	    });
 	});

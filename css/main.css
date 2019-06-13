@@ -790,7 +790,7 @@ img {
  .faq-container:first-child {
  	margin-top: 0;
  }
- .question .fas {
+ .question .fa {
  	transition: all 0.5s ease-in-out;
  	color: #B93293;
  }
