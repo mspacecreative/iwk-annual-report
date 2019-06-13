@@ -138,8 +138,8 @@ $(document).ready(function() {
 			});
 		} else if ($('.our-team-container').css('position') == 'static' ) {
 			$('.our-team-container').find('.our-team-window').on('click', function () {
-				$(this).children('p').slideToggle();
 				$(this).toggleClass('reveal');
+				$(this).children('p').slideToggle();
 				$('.our-team-window').not(this).each(function() {
 					$(this).removeClass('reveal');
 					$(this).children('p').slideUp();
@@ -148,10 +148,23 @@ $(document).ready(function() {
 		}
 	}
 	
+	/*var ourTeamWindow = $('.our-team-window');
+	$('.our-team-container').find(ourTeamWindow).on('click', function () {
+		if ( ourTeamWindow.hasClass('reveal') ) {
+			ourTeamWindow.children('p').slideDown();
+		} else {
+			ourTeamWindow.children('p').slideUp();
+		}
+	});*/
+	
 	// DOC READY
 	$(document).ready(function () {
 		checkStyle();
-		$(window).resize(checkStyle);
+	});
+	
+	// WINDOW RESIZE
+	$(window).resize(function () {
+		checkStyle();
 	});
 	
 	// CONTACT BOX SLIDE-OUT
