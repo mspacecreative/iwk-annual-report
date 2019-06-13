@@ -113,7 +113,7 @@ $(document).ready(function() {
 	});
 	
 	// CONTROL VIDEO PLAY
-	$(window).scroll(function(e)
+	/*$(window).scroll(function(e)
 	  {
 	    var offsetRange = $(window).height() / 3,
 	        offsetTop = $(window).scrollTop() + offsetRange + $("video").outerHeight(true),
@@ -128,7 +128,7 @@ $(document).ready(function() {
 	        this.pause();
 	      }
 	    });
-	});
+	});*/
 	
 	// OUR TEAM HOVER STATES
 	function checkStyle() {
@@ -136,7 +136,7 @@ $(document).ready(function() {
 			$('.our-team-window').hover(function () {
 				$(this).toggleClass('reveal');
 			});
-		} else {
+		} else if ($('.our-team-container').css('position') == 'static' ) {
 			$('.our-team-container').find('.our-team-window').on('click', function () {
 				$(this).children('p').slideToggle();
 				$(this).toggleClass('reveal');

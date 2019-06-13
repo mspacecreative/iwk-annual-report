@@ -369,14 +369,6 @@ video, iframe {
 	margin: 0 0 25px;
 }
 
-.leadership {
-	background-image: url(../img/leadership-message-portrait.jpg);
-	background-size: cover;
-	background-position: top center;
-	align-self: center;
-	height: 600px;
-}
-
 .top-bottom-padding {
 	padding: 50px 0;
 }
@@ -497,6 +489,10 @@ body p:last-of-type {
 
 .left-bottom {
 	padding: 30% 0 5%;
+}
+
+.left-bottom.higher {
+	padding: 30% 0 12%;
 }
 
 .left-bottom-wide {
@@ -1170,14 +1166,17 @@ body.menu .overlay {
 	.border-left {
 		border-left: 3px solid #B93293;
 	}
+	
+	.leadership {
+		padding-top: 5%;
+		margin-top: 85px;
+	}
 }
 
-@media (max-width: 450px) {
-	body h2 {
-		font-size: 28px;
-	}
-	.cta-button.magenta-bg {
-		bottom: 0;
+@media (min-width: 981px) and (max-width: 1330px) {
+	.leadership {
+		padding-top: 5%;
+		margin-top: 145px;
 	}
 }
 
@@ -1216,6 +1215,15 @@ body.menu .overlay {
 @media (max-width: 768px) {
 	.logo img {
 		width: 70px;
+	}
+	
+	.absolute-positioned-content_top.section_title {
+	    position: relative;
+	    z-index: 1;
+	    bottom: auto;
+	    width: 100%;
+	    top: -130px;
+	    margin: 0 auto -130px;
 	}
 	
 	.governance-slideout .one_third:first-child, .governance-slideout .one_third, .governance-slideout .one_third:last-child {
@@ -1263,12 +1271,6 @@ body.menu .overlay {
 	.shrink .logo img {
 		width: 50px;
 	}
-	.right-bottom, .right-top {
-		float: none;
-	}
-	.right-top, .left-top {
-		padding: 30% 0 5%;
-	}
 	.absolute-positioned-content_top.section_title {
 		top: auto;
 		margin: auto;
@@ -1285,6 +1287,33 @@ body.menu .overlay {
 	#achievements h1 {
 		margin-bottom: 25px;
 	}
+	.absolute-positioned-content_top, .absolute-positioned-content_bottom {
+	    position: relative;
+	    z-index: 1;
+	    bottom: auto;
+	    width: 100%;
+	    top: -130px;
+	    margin: 0 auto -157px;
+	}
+	.absolute-positioned-content_top.section_title {
+	    position: relative;
+	    z-index: 1;
+	    bottom: auto;
+	    width: 100%;
+	    top: auto;
+	}
+	.section_title h2 {
+		padding-bottom: 50px;
+	}
+	.right-bottom, .right-top {
+		float: none;
+	}
+	.right-top, .left-top, .left-bottom, .left-bottom.higher, .right-bottom {
+		padding: 100px 0 5%;
+	}
+	.max-500, .max-800 {
+		max-width: none!important;
+	}
 	footer .one_third {
 		margin-bottom: 25px;
 	}
@@ -1299,19 +1328,11 @@ body.menu .overlay {
 	}
 	#leadership .three_fifths {
 		position: relative;
-		top: -220px;
+		top: 0;
 		width: 90%;
 		padding: 5% 5% 50px;
-		margin: 0 auto -220px;
+		margin: 0 auto 0;
 		background-color: #fff;
-	}
-	.absolute-positioned-content_bottom, .absolute-positioned-content_top {
-	    position: relative;
-	    z-index: 1;
-	    bottom: auto;
-	    width: 100%;
-	    top: -130px;
-	    margin: 0 auto -130px;
 	}
 	.two_fifths {
 		width: 100%;
@@ -1326,16 +1347,33 @@ body.menu .overlay {
 	}
 }
 
+@media (max-width: 450px) {
+	body h2 {
+		font-size: 28px;
+	}
+	.cta-button.magenta-bg {
+		bottom: 0;
+	}
+	#leadership .three_fifths {
+	    position: relative;
+	    top: -200px;
+	    width: 90%;
+	    padding: 5% 5% 50px;
+	    margin: 0 auto -200px;
+	    background-color: #fff;
+	}
+}
+
 @media (max-width: 812px) and (orientation: landscape) {
 	.logo img {
 		width: 70px;
 	}
 	#leadership .three_fifths {
 	    position: relative;
-	    top: -220px;
+	    top: -120px;
 	    width: 90%;
 	    padding: 5% 5% 50px;
-	    margin: 0 auto -220px;
+	    margin: 0 auto -120px;
 	    background-color: #fff;
 	}
 	.leadership {
@@ -1359,11 +1397,8 @@ body.menu .overlay {
 	.wrap {
 		padding-top: 70px;
 	}
-	.right-bottom, .left-bottom, .right-top {
+	.right-bottom, .left-bottom, .right-top, .left-bottom.higher {
 		padding-top: 15%;
-	}
-	.max-500, .max-800 {
-		max-width: none;
 	}
 }
 
