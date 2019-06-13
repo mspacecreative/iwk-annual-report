@@ -750,13 +750,13 @@ img {
 }
 
 .carousel .slick-next:before {
-	font-family: "Font Awesome 5 Free";
+	font-family: fontAwesome;
 	content: '\f054';
 	font-size: 30px;
 }
 
 .carousel .slick-prev:before {
-	font-family: "Font Awesome 5 Free";
+	font-family: fontAwesome;
 	content: '\f053';
 	font-size: 30px;
 }
