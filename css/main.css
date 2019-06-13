@@ -745,6 +745,8 @@ img {
 
 .carousel .slick-next, .carousel .slick-prev {
 	z-index: 10;
+	width: auto;
+	height: auto;
 }
 
 .carousel .slick-next:before {
