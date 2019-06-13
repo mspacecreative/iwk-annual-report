@@ -148,23 +148,41 @@ $(document).ready(function() {
 		}
 	}
 	
-	/*var ourTeamWindow = $('.our-team-window');
-	$('.our-team-container').find(ourTeamWindow).on('click', function () {
-		if ( ourTeamWindow.hasClass('reveal') ) {
-			ourTeamWindow.children('p').slideDown();
+	$(window).bind('resize', function(e)
+	{
+	  console.log('window resized..');
+	  this.location.reload(false); /* false to get page from cache */
+	  /* true to fetch page from server */
+	});
+	
+	/*function checkStyle() {
+		if (window.matchMedia("(max-width: 1024px)").matches) {
+			$('.our-team-container').find('.our-team-window').on('click', function () {
+			  	$(this).toggleClass('reveal');
+			  	$(this).children('p').slideToggle();
+			  	$('.our-team-window').not(this).each(function() {
+			  		$(this).removeClass('reveal');
+			  		$(this).children('p').slideUp();
+			  	});
+			});
+		  	
 		} else {
-			ourTeamWindow.children('p').slideUp();
+			$('.our-team-window').hover(function () {
+				$(this).toggleClass('reveal');
+			});
 		}
-	});*/
+	}*/
 	
 	// DOC READY
 	$(document).ready(function () {
 		checkStyle();
+		changeToggle();
 	});
 	
 	// WINDOW RESIZE
 	$(window).resize(function () {
 		checkStyle();
+		changeToggle();
 	});
 	
 	// CONTACT BOX SLIDE-OUT
@@ -183,5 +201,12 @@ $(document).ready(function() {
 		$('body').toggleClass('menu');
 		$('#nav-icon').toggleClass('open');
 	});
+	
+	function changeToggle() {
+		var mathStuff = $(window).width() - 1600;
+		if (window.matchMedia("(min-width: 1600px)").matches) {
+			$('.toggle').css('right', mathStuff / 2);
+		}
+	}
 
 })(jQuery);
