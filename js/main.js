@@ -131,7 +131,7 @@ $(document).ready(function() {
 	});*/
 	
 	// OUR TEAM HOVER STATES
-	function checkStyle() {
+	//function checkStyle() {
 		if ($('.our-team-container').css('position') == 'relative' ) {
 			$('.our-team-window').hover(function () {
 				$(this).toggleClass('reveal');
@@ -146,7 +146,7 @@ $(document).ready(function() {
 				});
 			});
 		}
-	}
+	//}
 	
 	/*function checkStyle() {
 		if (window.matchMedia("(max-width: 1024px)").matches) {
@@ -175,13 +175,13 @@ $(document).ready(function() {
 	
 	// DOC READY
 	$(document).ready(function () {
-		checkStyle();
+		//checkStyle();
 		changeToggle();
 	});
 	
 	// WINDOW RESIZE
 	$(window).resize(function () {
-		checkStyle();
+		//checkStyle();
 		changeToggle();
 	});
 	
