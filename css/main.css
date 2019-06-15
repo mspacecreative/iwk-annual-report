@@ -273,6 +273,7 @@ nav a:focus {
     -o-transition: all 0.5s ease-in-out;
     transition: all .5s ease-in-out;
     cursor: pointer;
+	display: block;
 }
 
 #nav-icon span {
