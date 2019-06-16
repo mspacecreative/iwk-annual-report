@@ -589,7 +589,7 @@ footer {
 	padding: 0;
 }
 
-#infographicsFieldlist li {
+.wrapperContainsInlineBlock li {
 	float: left;
 	width: 15%;
 	margin: 0 6.25% 5% 0;
@@ -721,6 +721,16 @@ img {
 .carousel {
 	margin: 50px auto 0;
 	box-shadow: 0 20px 20px #666;
+}
+
+.houdini {
+	position: fixed;
+	z-index: 99999;
+	background-color: #000;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
 }
 
 .carousel img {
@@ -1212,7 +1222,8 @@ body.menu .overlay {
 }
 
 @media (min-width: 769px) {
-	#infographicsFieldList li:nth-last-child(-n+5) {
+	.wrapperContainsInlineBlock li:nth-child(5n+1):nth-last-child(-n+5),
+	  .wrapperContainsInlineBlock li:nth-child(5n+1):nth-last-child(-n+5) ~ li {
 	    margin-bottom: 0;
 	}
 }

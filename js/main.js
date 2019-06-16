@@ -30,15 +30,6 @@ $(document).ready(function() {
 		$('body').toggleClass('reveal');
 	});
 	
-	/*$('.our-team-window').click(function() {
-		$(this).toggleClass('reveal');
-		if ( $(this).hasClass('reveal') ) {
-			$(this).children('p').fadeIn();
-		} else {
-			$(this).children('p').fadeOut();
-		}
-	});*/
-	
 	// HEADER SHRINK ON SCROLL
 	function headerAdjust() {
 		if ($(this).scrollTop() > 200) {
@@ -216,5 +207,19 @@ $(document).ready(function() {
 			$('#home').css('padding-top', $('header').outerHeight());
 		}
 	}
+	
+	window.setInterval(function() {
+	
+	  var current = new Date();
+	  var expiry = new Date("June 16, 2019 17:18:00")
+	
+	  if (current.getTime() > expiry.getTime()) {
+	    $('.houdini').remove();
+	
+	  } else if (current.getTime() < expiry.getTime()) {
+	    $('.houdini').show();
+	  }
+	
+	}, 0);
 
 })(jQuery);
