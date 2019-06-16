@@ -177,12 +177,14 @@ $(document).ready(function() {
 	$(document).ready(function () {
 		//checkStyle();
 		changeToggle();
+		homeWrapTopPadding();
 	});
 	
 	// WINDOW RESIZE
 	$(window).resize(function () {
 		//checkStyle();
 		changeToggle();
+		homeWrapTopPadding();
 	});
 	
 	// CONTACT BOX SLIDE-OUT
@@ -206,6 +208,12 @@ $(document).ready(function() {
 		var mathStuff = $(window).width() - 1600;
 		if (window.matchMedia("(min-width: 1600px)").matches) {
 			$('.toggle').css('right', mathStuff / 2);
+		}
+	}
+	
+	if ($('.our-team-container').css('position') == 'static' ) {
+		function homeWrapTopPadding() {
+			$('#home').css('padding-top', $('header').outerHeight());
 		}
 	}
 
