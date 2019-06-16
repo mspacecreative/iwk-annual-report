@@ -882,7 +882,8 @@ img {
  }
  
  footer img {
- 	max-width: 150px;
+ 	width: 150px;
+ 	max-width: 100%;
  }
  
  /* ==========================================================================
@@ -1220,6 +1221,10 @@ body.menu .overlay {
 		width: 70px;
 	}
 	
+	footer-menu {
+		margin-bottom: 25px;
+	}
+	
 	.absolute-positioned-content_top.section_title {
 	    position: relative;
 	    z-index: 1;
@@ -1373,6 +1378,9 @@ body.menu .overlay {
 @media (max-width: 812px) and (orientation: landscape) {
 	.logo img {
 		width: 70px;
+	}
+	footer-menu {
+		margin-bottom: 25px;
 	}
 	#leadership .three_fifths {
 	    position: relative;
