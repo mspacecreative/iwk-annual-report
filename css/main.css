@@ -672,6 +672,13 @@ footer {
 	transition: all 0.5s ease-in-out;
 }
 
+.script-font {
+	display: block;
+	font-family: 'Dancing Script', cursive;
+	margin: 25px 0 0;
+	font-size: 22px;
+}
+
 .our-team-window.reveal:before {
 	opacity: 1;
 	visibility: visible;
