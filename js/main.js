@@ -53,11 +53,14 @@ $(document).ready(function() {
 	      $('html,body').animate({
 	        scrollTop: target.offset().top-50
 	      }, 1000);
-		  $('body').toggleClass('reveal menu');
-		  $('.toggle').toggleClass('open');
 		  return false;
 	    }
 	  }
+	});
+	
+	$('nav li a').click(function () {
+		$('body').toggleClass('reveal menu');
+		$('#nav-icon, .toggle').toggleClass('open');
 	});
 	
 	/*function equalColumns() {
