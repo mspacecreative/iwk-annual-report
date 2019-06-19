@@ -667,6 +667,10 @@ footer {
 	flex-basis: 100%;
 }
 
+.our-team-container .our-team-window:first-of-type p {
+	max-width: 600px;
+}
+
 .orange-text {
 	color: #ED965C;
 }
