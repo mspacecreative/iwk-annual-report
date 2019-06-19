@@ -91,6 +91,7 @@
 		arrows: true,
 		adaptiveHeight: true,
 		slickPause: true,
+		autoplaySpeed: 5000;
 	});
 	
 	function galleryControl() {
