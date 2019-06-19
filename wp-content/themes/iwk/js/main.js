@@ -42,6 +42,7 @@
 	// WINDOW SCROLL
 	$(window).scroll(function () {
 		headerAdjust();
+		galleryControl();
 	});
 	
 	// SMOOTH SCROLL
@@ -106,6 +107,14 @@
 		arrows: true,
 		adaptiveHeight: true,
 	});
+	
+	function galleryControl() {
+		if ( $('.carousel').visible( true ) ) {
+			$('.carousel').slick('slickPlay');
+		} else {
+			$('.carousel').slick('slickPause');
+		}
+	}
 	
 	// CONTROL VIDEO PLAY
 	/*$(window).scroll(function(e)

@@ -39,6 +39,9 @@ function iwk_enqueue_styles() {
 	wp_register_script('slick-script', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), null, true);
 	wp_enqueue_script('slick-script');
 	
+	wp_register_script('slick-control', get_template_directory_uri() . '/js/jquery.visible.min.js', array('jquery'), null, true);
+	wp_enqueue_script('slick-control');
+	
 	wp_register_script('main-scripts', get_template_directory_uri() . '/js/main.js', array('jquery'), null, true);
 	wp_enqueue_script('main-scripts');
 }
