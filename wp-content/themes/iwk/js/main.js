@@ -102,10 +102,10 @@
 	
 	// SLICK SLIDER
 	$('.carousel').slick({
-	    autoplay: true,
-		dots: true,
+	    dots: true,
 		arrows: true,
 		adaptiveHeight: true,
+		slickPause: true,
 	});
 	
 	function galleryControl() {
