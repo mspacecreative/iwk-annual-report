@@ -652,7 +652,19 @@ footer {
 	background-size: cover;
 	background-position: center;
 	width: 50%;
+	float: left;
 	flex-basis: 50%;
+}
+
+.our-team-container .our-team-window:first-of-type {
+	padding-bottom: 25%;
+	cursor: pointer;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	float: none;
+	flex-basis: 100%;
 }
 
 .orange-text {
