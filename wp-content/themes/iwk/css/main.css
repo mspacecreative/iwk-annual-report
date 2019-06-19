@@ -248,7 +248,7 @@ nav a:focus {
 
 .toggle.open {
 	transform: translateX(-270px);
-	right: 0;
+	right: 0!important;
 }
 
 .toggle.shrink {
@@ -422,8 +422,12 @@ body p:last-of-type {
 	padding: 25px;
 }
 
-.content-box.blue {
+#milestone-moments .max-1600:nth-child(even) .content-box {
 	background-color: #0167A5;
+}
+
+#milestone-moments .max-1600:nth-child(odd) .content-box {
+	background-color: #B93293;
 }
 
 .content-box.magenta, .cta-button.magenta-bg {

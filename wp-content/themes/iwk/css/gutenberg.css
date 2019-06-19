@@ -1,0 +1,8 @@
+.wp-block {
+	width: 100% !important;
+	max-width: 1200px !important;
+}
+.editor-styles-wrapper .editor-writing-flow {
+	margin: 0 !important;
+	max-width: 1200px !important;
+}

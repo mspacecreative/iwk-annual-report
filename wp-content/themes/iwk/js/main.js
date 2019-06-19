@@ -104,6 +104,7 @@
 	    autoplay: true,
 		dots: true,
 		arrows: true,
+		adaptiveHeight: true,
 	});
 	
 	// CONTROL VIDEO PLAY
@@ -167,6 +168,12 @@
 	  /* true to fetch page from server
 	});*/
 	
+	function homeWrapTopPadding() {
+		if ($('.our-team-container').css('position') == 'static' ) {
+			$('#home').css('padding-top', $('header').outerHeight());
+		}
+	}
+	
 	// DOC READY
 	$(document).ready(function () {
 		//checkStyle();
@@ -202,12 +209,8 @@
 		var mathStuff = $(window).width() - 1600;
 		if (window.matchMedia("(min-width: 1600px)").matches) {
 			$('.toggle').css('right', mathStuff / 2);
-		}
-	}
-	
-	if ($('.our-team-container').css('position') == 'static' ) {
-		function homeWrapTopPadding() {
-			$('#home').css('padding-top', $('header').outerHeight());
+		} else {
+			$('.toggle').css('right', '5%');
 		}
 	}
 	

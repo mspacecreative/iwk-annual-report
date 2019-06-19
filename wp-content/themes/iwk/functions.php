@@ -1,7 +1,7 @@
 <?php
 
 /* LOAD STYLES AND SCRIPTS */
-function nodal_enqueue_styles() {
+function iwk_enqueue_styles() {
 
 	wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.min.css', '', null );
 	wp_enqueue_style('normalize');
@@ -46,7 +46,7 @@ function nodal_enqueue_styles() {
 /* REGISTER MENU */
 function nav_registration() {
 	register_nav_menus( array(
-		'primary-menu'   => esc_html__( 'Primary Menu', 'NodalBlock' )
+		'primary-menu'   => esc_html__( 'Primary Menu', 'IWK Annual Report 2018/19' )
 	) );
 }
 
@@ -62,6 +62,9 @@ if (function_exists('add_theme_support')) {
 	add_image_size('large', 700, '', true); // Large Thumbnail
 	add_image_size('medium', 250, '', true); // Medium Thumbnail
 	add_image_size('small', 120, '', true); // Small Thumbnail
+	add_image_size('signatures', 180, 80, true); // Small Thumbnail
+	add_image_size('icons', 200, 200, true); // Small Thumbnail
+	add_image_size('full', '', '', true); // Small Thumbnail
 }
 
 /* TITLE TAG SUPPORT */
@@ -69,38 +72,7 @@ function titleTag() {
  add_theme_support( 'title-tag' );
 }
 
-function my_mce_before_init_insert_formats( $init_array ) {
- 
-    $style_formats = array(  
-
-        array(  
-            'title' => 'White CTA Button',  
-            'block' => 'a',  
-            'classes' => 'cta_button_light',
-            'wrapper' => true,
-             
-        ),  
-        array(  
-            'title' => 'Green CTA Button',  
-            'block' => 'a',  
-            'classes' => 'cta_button',
-            'wrapper' => true,
-        ),
-        array(  
-            'title' => 'H3 with top line rule',  
-            'block' => 'h3',  
-            'classes' => 'h3_linerule',
-            'wrapper' => true,
-        ),
-    );  
-    $init_array['style_formats'] = json_encode( $style_formats );  
-     
-    return $init_array;  
-   
-}
-
 // ACTIONS, OPTIONS AND FILTERS
-add_action('wp_enqueue_scripts', 'nodal_enqueue_styles');
+add_action('wp_enqueue_scripts', 'iwk_enqueue_styles');
 add_action( 'after_setup_theme', 'nav_registration' );
-add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 add_action( 'after_setup_theme', 'titleTag' );
