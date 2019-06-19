@@ -787,6 +787,10 @@ img {
 	padding: 15px;
 }
 
+.carousel-caption p span {
+	display: block;
+}
+
 .carousel .slick-next, .carousel .slick-prev {
 	z-index: 10;
 	width: auto;
