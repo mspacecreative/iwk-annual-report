@@ -1453,7 +1453,7 @@ body.menu .overlay {
 }
 
 @media (min-width: 1600px) {
-	.moment .max-1600:before {
+	/*.moment .max-1600:before {
 		background-image: linear-gradient(270deg, rgba(255,255,255,1), rgba(255,255,255,.5), rgba(255,255,255,0));
 		position: absolute;
 		top: 0;
@@ -1462,9 +1462,6 @@ body.menu .overlay {
 		width: 150px;
 		z-index: 1;
 		content: '';
-	}
-	.toggle.open {
-		right: 0!important;
 	}
 	.moment .max-1600:after {
 		background-image: linear-gradient(90deg, rgba(255,255,255,1), rgba(255,255,255,.5), rgba(255,255,255,0));
@@ -1475,6 +1472,9 @@ body.menu .overlay {
 		width: 150px;
 		z-index: 1;
 		content: '';
+	}*/
+	.toggle.open {
+		right: 0!important;
 	}
 }
 
