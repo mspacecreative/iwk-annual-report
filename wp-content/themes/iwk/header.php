@@ -38,18 +38,12 @@
 		
 		<!-- NAVIGATION -->
 		<nav>
-			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#leadership">Leadership Message</a></li>
-				<li><a href="#highlights">Our Highlights</a></li>
-				<li><a href="#milestone-moments">Milestone Moments</a></li>
-				<li><a href="#achievements">Significant Events</a></li>
-				<li><a href="#infographics">By the Numbers</a></li>
-				<li><a href="#team">Our Team</a></li>
-				<li><a href="#community">Our Community</a></li>
-				<li><a href="#performance">Financials</a></li>
-				<li><a href="#governance">Governance</a></li>
-			</ul>
+			<?php 
+				wp_nav_menu( array( 
+					'theme_location' => 'primary-menu',
+					'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s ' . $menu . '</ul>', 
+				) ); 
+			?>
 		</nav>
 		<!-- / NAVIGATION -->
 		
