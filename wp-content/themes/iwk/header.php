@@ -72,7 +72,7 @@
 				
 				<!-- SITE TITLE -->
 				<div class="site-title">
-					<h1>IWK Annual Report 2018/2019</h1>
+					<h1><?php bloginfo('name'); ?></h1>
 				</div>
 				
 			</div>
@@ -82,3 +82,12 @@
 		<!-- OVERLAY -->
 		<div class="overlay"></div>
 		<!-- / OVERLAY -->
+	
+		<!-- FINANCIAL LINKS -->
+		<div class="financial-links">
+			<ul>
+				<li><a href="#">Audited Financial Statements</a></li>
+				<li><a href="#">Management Discussion &amp; Analysis</a></li>
+			</ul>
+		</div>
+		<!-- / FINANCIAL LINKS -->
