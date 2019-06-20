@@ -767,6 +767,7 @@ img {
 
 body video {
 	display: block;
+	margin: 0;
 }
 
 .carousel img {
