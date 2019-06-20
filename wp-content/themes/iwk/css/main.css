@@ -669,6 +669,7 @@ footer {
 
 .our-team-container .our-team-window:first-of-type p {
 	max-width: 600px;
+	margin: auto;
 }
 
 .orange-text {
