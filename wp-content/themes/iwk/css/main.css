@@ -676,6 +676,10 @@ footer {
 	color: #ED965C;
 }
 
+.mobile-poster {
+	display: none;
+}
+
 .magenta-text {
 	color: #B93293;
 }
@@ -1483,6 +1487,15 @@ body.menu .overlay {
 	}
 	.right-bottom, .left-bottom, .right-top, .left-bottom.higher {
 		padding-top: 15%;
+	}
+}
+
+@media (max-device-width: 1366px) {
+	.mobile-poster {
+		display: block;
+	}
+	.video-container {
+		display: none;
 	}
 }
 
