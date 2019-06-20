@@ -794,6 +794,8 @@ body video {
 
 .carousel-caption p span {
 	display: block;
+	margin: 0 0 5px;
+	font-weight: bold;
 }
 
 .carousel .slick-next, .carousel .slick-prev {
