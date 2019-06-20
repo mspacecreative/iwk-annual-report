@@ -1417,6 +1417,9 @@ body.menu .overlay {
 	body h2 {
 		font-size: 28px;
 	}
+	.carousel .slick-dots {
+		display: none;
+	}
 	.cta-button.magenta-bg {
 		bottom: 0;
 	}
@@ -1433,6 +1436,9 @@ body.menu .overlay {
 @media (max-width: 812px) and (orientation: landscape) {
 	.logo img {
 		width: 70px;
+	}
+	.carousel .slick-dots {
+		display: none;
 	}
 	.footer-menu {
 		margin-bottom: 25px;
