@@ -765,6 +765,10 @@ img {
 	top: 0;
 }
 
+body video {
+	display: block;
+}
+
 .carousel img {
 	position: relative;
 }
