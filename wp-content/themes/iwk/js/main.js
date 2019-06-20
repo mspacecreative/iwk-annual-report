@@ -199,7 +199,7 @@
 	}, 0);
 	
 	// FULL FINANCIALS OVERLAY
-	$('.cta-button').click(function () {
+	$('.financial-views').click(function () {
 		$('body').toggleClass('menu');
 		
 		if ( $('body').hasClass('menu') ) {
