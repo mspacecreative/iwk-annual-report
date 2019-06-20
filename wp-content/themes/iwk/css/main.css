@@ -775,7 +775,8 @@ body video {
 }
 
 .carousel .slick-dots {
-	bottom: 70px;
+	bottom: 130px;
+	position: relative;
 }
 
 .carousel .slick-dots li button:before {
