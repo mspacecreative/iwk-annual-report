@@ -150,12 +150,14 @@
 	$(document).ready(function () {
 		changeToggle();
 		homeWrapTopPadding();
+		errorPadding();
 	});
 	
 	// WINDOW RESIZE
 	$(window).resize(function () {
 		changeToggle();
 		homeWrapTopPadding();
+		errorPadding();
 	});
 	
 	// CONTACT BOX SLIDE-OUT
@@ -228,5 +230,10 @@
 		$('body').removeClass('menu reveal');
 		$('.contact-slideout, .toggle').removeClass('open');
 	});
+	
+	// ERROR PAGE WRAP PADDING
+	function errorPadding() {
+		$('.error404 .wrap').css('padding-top', $('header').outerHeight());
+	}
 
 })(jQuery);
