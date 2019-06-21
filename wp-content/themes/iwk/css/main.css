@@ -616,6 +616,13 @@ footer {
 
 .financial_button_container {
 	list-style: none;
+	position: relative;
+	float: right;
+	bottom: 10px;
+}
+
+.financial_button_container li:nth-child(even) .cta-button {
+	background-color: #B93293;
 }
 
 #achievements h1 {
