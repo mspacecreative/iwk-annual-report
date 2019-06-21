@@ -1477,8 +1477,18 @@ body.menu .overlay {
 	body h2 {
 		font-size: 28px;
 	}
+	.financial_button_container {
+		bottom: 41px;
+		margin: 0;
+	}
 	.financial_button_container li {
 		display: block;
+	}
+	.financial_button_container .cta-button {
+		font-size: 17px;
+	}
+	.financial_button_container li:first-of-type {
+		margin-bottom: 5px;
 	}
 	.carousel .slick-dots {
 		display: none;
