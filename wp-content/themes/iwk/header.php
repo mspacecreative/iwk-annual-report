@@ -66,7 +66,7 @@
 				<div class="logo">
 					<?php
 					$url = home_url( $path = '/', $scheme = https ); ?>
-					<a href="<?php echo $url; ?>/#home">
+					<a href="<?php echo $url; ?>#home">
 						<img src="img/iwk-health-centre-logo.png" alt="IWK Health Centre" />
 					</a>
 				</div>
