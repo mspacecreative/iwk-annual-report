@@ -610,6 +610,10 @@ footer {
 	padding-bottom: 80px;
 }
 
+.financial_button_container {
+	list-style: none;
+}
+
 #achievements h1 {
 	text-transform: uppercase;
 	font-size: 40px;
