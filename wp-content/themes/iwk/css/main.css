@@ -1486,6 +1486,7 @@ body.menu .overlay {
 	}
 	.financial_button_container .cta-button {
 		font-size: 17px;
+		display: block;
 	}
 	.financial_button_container li:first-of-type {
 		margin-bottom: 5px;
