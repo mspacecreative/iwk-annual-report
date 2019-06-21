@@ -1477,6 +1477,9 @@ body.menu .overlay {
 	body h2 {
 		font-size: 28px;
 	}
+	.financial_button_container li {
+		display: block;
+	}
 	.carousel .slick-dots {
 		display: none;
 	}
