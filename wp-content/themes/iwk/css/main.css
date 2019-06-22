@@ -110,7 +110,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-.body.fixed {
+body.fixed {
 	overflow: hidden;
 }
 
