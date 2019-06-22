@@ -78,8 +78,8 @@ $getfield = 'time_input';
 $currentdate = date('F j', 'Y H:i:s');
 $futuredate = get_field($getfield, 2);
 
-if($currentdate > $futuredate) {
-	$my_plugin = $plugin_path.'mspace_timer/mspace_timer.php';
+if($futuredate < $currentdate) {
+	$my_plugin = $plugin_path . 'mspace_timer/mspace_timer.php';
 	// Check to see if plugin is already active
 	if(is_plugin_active($my_plugin)) {
 		deactivate_plugins($my_plugin);
