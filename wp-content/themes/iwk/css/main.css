@@ -115,6 +115,12 @@ body.fixed {
 	position: fixed;
 }
 
+.launched .countDown_container {
+	display: none!important;
+	opacity: 0;
+	visibility: hidden;
+}
+
 header {
 	background-color: #B93293;
 	padding: 15px 0;
