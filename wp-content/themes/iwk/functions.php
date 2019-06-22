@@ -75,19 +75,6 @@ function titleTag() {
  add_theme_support( 'title-tag' );
 }
 
-$counter_date_input = 'time_input';
-$datetime = get_field($counter_date_input, 'options');
-$currentdate = new DateTime();
-$futuredate = new DateTime($datetime);
-
-if($currentdate > $futuredate) {
-    $my_plugin = $plugin_path.'mspace_timer/mspace_timer.php';
-    // Check to see if plugin is already active
-    if(is_plugin_active($my_plugin)) {
-        deactivate_plugins($my_plugin);
-    }
-}
-
 // ACTIONS, OPTIONS AND FILTERS
 add_action('wp_enqueue_scripts', 'iwk_enqueue_styles');
 add_action( 'after_setup_theme', 'nav_registration' );
