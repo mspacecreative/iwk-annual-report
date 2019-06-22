@@ -110,6 +110,10 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+.body.fixed {
+	overflow: hidden;
+}
+
 header {
 	background-color: #B93293;
 	padding: 15px 0;

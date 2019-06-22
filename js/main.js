@@ -214,7 +214,7 @@ $(document).ready(function() {
 	window.setInterval(function() {
 	
 	  var current = new Date();
-	  var expiry = new Date("June 16, 2019 17:18:00")
+	  var expiry = new Date("June 21, 2019 15:37:00")
 	
 	  if (current.getTime() > expiry.getTime()) {
 	    $('.houdini').remove();

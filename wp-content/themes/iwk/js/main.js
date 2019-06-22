@@ -186,20 +186,6 @@
 		}
 	}
 	
-	window.setInterval(function() {
-	
-	  var current = new Date();
-	  var expiry = new Date("June 16, 2019 17:18:00")
-	
-	  if (current.getTime() > expiry.getTime()) {
-	    $('.houdini').remove();
-	
-	  } else if (current.getTime() < expiry.getTime()) {
-	    $('.houdini').show();
-	  }
-	
-	}, 0);
-	
 	// FULL FINANCIALS OVERLAY
 	$('.financial-views').click(function () {
 		$('body').toggleClass('menu');
