@@ -74,9 +74,7 @@ if (function_exists('add_theme_support')) {
 function titleTag() {
  add_theme_support( 'title-tag' );
 }
-$targetoptions = 'option';
-$datetime = get_field('time_input', $targetoptions);
-$datetime = DateTime::createFromFormat('F j', 'Y H:i:s', $datetime);
+$datetime = get_field('time_input');
 $currentdate =  date('F j', 'Y H:i:s');
 $futuredate = new DateTime($datetime);
 
