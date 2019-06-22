@@ -75,6 +75,18 @@ function titleTag() {
  add_theme_support( 'title-tag' );
 }
 
+$datetime = get_field('time_input', 'options');
+$currentdate = date('F j', 'Y H:i:s');
+$futuredate = new DateTime($datetime);
+
+if($currentdate > $futuredate) {
+	$my_plugin = $plugin_path.'mspace_timer/mspace_timer.php';
+	// Check to see if plugin is already active
+	if(is_plugin_active($my_plugin)) {
+		deactivate_plugins($my_plugin);
+	}
+}
+
 // ACTIONS, OPTIONS AND FILTERS
 add_action('wp_enqueue_scripts', 'iwk_enqueue_styles');
 add_action( 'after_setup_theme', 'nav_registration' );
