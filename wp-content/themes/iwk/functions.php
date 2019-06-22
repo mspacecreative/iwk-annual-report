@@ -75,8 +75,10 @@ function titleTag() {
  add_theme_support( 'title-tag' );
 }
 
+$counter_date_input = 'time_input';
+$datetime = get_field($counter_date_input, 'options');
 $currentdate = new DateTime();
-$futuredate = new DateTime('2019-06-22 14:17:00');
+$futuredate = new DateTime($datetime);
 
 if($currentdate > $futuredate) {
     $my_plugin = $plugin_path.'mspace_timer/mspace_timer.php';
