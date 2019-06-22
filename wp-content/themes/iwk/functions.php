@@ -75,7 +75,8 @@ function titleTag() {
  add_theme_support( 'title-tag' );
 }
 $datetime = get_field('time_input', 2);
-$currentdate =  date();
+$currentdateset = date('F j', 'Y H:i:s');
+$currentdate = $currentdateset;
 $futuredate = new DateTime($datetime);
 
 if($currentdate > $futuredate) {
