@@ -115,6 +115,10 @@ body.fixed {
 	position: fixed;
 }
 
+body.fixed .wrap {
+	display: none;
+}
+
 .launched ~ .inner-contents {
 	display: none!important;
 	opacity: 0;
