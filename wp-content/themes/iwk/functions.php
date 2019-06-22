@@ -74,10 +74,9 @@ if (function_exists('add_theme_support')) {
 function titleTag() {
  add_theme_support( 'title-tag' );
 }
-
 $datetime = get_field('time_input', 'options');
-$currentdate = new DateTime('F j', 'Y H:i:s');
-$futuredate = new DateTime($datetime);
+$currentdate =  date('F j', 'Y H:i:s');
+$futuredate = new DateTime('F j', 'Y H:i:s', $datetime);
 
 if($currentdate > $futuredate) {
 	$my_plugin = $plugin_path.'mspace_timer/mspace_timer.php';
