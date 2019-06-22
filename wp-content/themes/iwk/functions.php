@@ -77,7 +77,8 @@ function titleTag() {
 
 $retrievefield = 'time_input';
 $retrieveall = get_field($retrievefield, 2);
-$currentdate = DateTime::createFromFormat('F j', 'Y H:i:s');
+$currentdateformat = DateTime::createFromFormat('F j', 'Y H:i:s');
+$currentdate = new $currentdateformat;
 $futuredate = new DateTime($retrieveall);
 
 if ( $currentdate > $futuredate ) {
