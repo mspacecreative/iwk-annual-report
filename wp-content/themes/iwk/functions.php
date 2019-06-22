@@ -76,7 +76,7 @@ function titleTag() {
 }
 
 $datetime = get_field('time_input', 'options');
-$currentdate = date('F j', 'Y H:i:s');
+$currentdate = new DateTime('F j', 'Y H:i:s');
 $futuredate = new DateTime($datetime);
 
 if($currentdate > $futuredate) {
