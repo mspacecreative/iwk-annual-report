@@ -117,8 +117,6 @@ body.fixed {
 
 .inner_contents {
 	display: none;
-	opacity: 0;
-	visibility: hidden;
 }
 
 header {
