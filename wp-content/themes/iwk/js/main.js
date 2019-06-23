@@ -155,6 +155,11 @@
 		$('.launched .inner_contents').hide();
 	});
 	
+	// WINDOW LOAD
+	$(window).load(function () {
+		$('.launched .inner_contents').show();
+	});
+	
 	// WINDOW RESIZE
 	$(window).resize(function () {
 		changeToggle();
