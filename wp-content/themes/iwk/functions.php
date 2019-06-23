@@ -80,7 +80,7 @@ $retrieveall = get_field($retrievefield, 2);
 $currentdate = new Datetime();
 $futuredate = new DateTime($retrieveall);
 
-if ( $currentdate->format('Y-m-d H:i:s') < $futuredate->format('Y-m-d H:i:s') ) {
+if ( $currentdate->format('Y-m-d H:i:s') == $futuredate->format('Y-m-d H:i:s') ) {
 	$my_plugin = $plugin_path . 'mspace_timer/mspace_timer.php';
 	// Check to see if plugin is already active
 	if(is_plugin_active($my_plugin)) {
