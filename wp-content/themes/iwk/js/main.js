@@ -158,6 +158,9 @@
 	// WINDOW LOAD
 	$(window).load(function () {
 		$('.inner_contents').show();
+		if ( $('body').hasClass('launched') ) {
+			$('.inner_contents').hide();
+		}
 	});
 	
 	// WINDOW RESIZE
