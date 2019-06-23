@@ -78,7 +78,7 @@ function titleTag() {
 $retrievefield = 'disable_plugin';
 $retrieveall = get_field($retrievefield, 2);
 $currentdate = (new DateTime('currentdate'))->format('Y-m-d H:i:s');
-$futuredate = (new DateTime($retrieveall))->format('Y-m-d H:i:s');;
+$futuredate = (new DateTime('futuredate'))->format('Y-m-d H:i:s');;
 
 if ( $currentdate > $futuredate ) {
 	$my_plugin = $plugin_path . 'mspace_timer/mspace_timer.php';
