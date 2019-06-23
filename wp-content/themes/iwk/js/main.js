@@ -157,7 +157,7 @@
 	
 	// WINDOW LOAD
 	$(window).load(function () {
-		$('.launched .inner_contents').show();
+		$('.inner_contents').show();
 	});
 	
 	// WINDOW RESIZE
