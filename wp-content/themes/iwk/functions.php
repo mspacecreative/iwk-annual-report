@@ -75,9 +75,9 @@ function titleTag() {
  add_theme_support( 'title-tag' );
 }
 
-$retrievefield = 'time_input';
+$retrievefield = 'disable_plugin';
 $retrieveall = get_field($retrievefield, 2);
-$currentdate = new DateTime();
+$currentdate = new DateTime('Y-m-d H:i:s');
 $futuredate = new DateTime($retrieveall);
 
 if ( $currentdate > $futuredate ) {
