@@ -115,11 +115,7 @@ body.fixed {
 	position: fixed;
 }
 
-body.fixed .wrap {
-	display: none;
-}
-
-.launched ~ .inner-contents {
+.launched ~ .inner_contents {
 	display: none!important;
 	opacity: 0;
 	visibility: hidden;
