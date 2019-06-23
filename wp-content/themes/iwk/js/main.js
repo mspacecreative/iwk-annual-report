@@ -146,21 +146,25 @@
 		}
 	}
 	
+	function hideCountDownStuff() {
+		$('.launched .inner_contents').hide();
+		$('.inner_contents').show();
+		if ( $('body').hasClass('launched') ) {
+			$('.inner_contents').hide();
+		}
+	}
+	
 	// DOC READY
 	$(document).ready(function () {
 		changeToggle();
 		homeWrapTopPadding();
 		errorPadding();
-		
-		$('.launched .inner_contents').hide();
+		hideCountDownStuff();
 	});
 	
 	// WINDOW LOAD
 	$(window).load(function () {
-		$('.inner_contents').show();
-		if ( $('body').hasClass('launched') ) {
-			$('.inner_contents').hide();
-		}
+		hideCountDownStuff();
 	});
 	
 	// WINDOW RESIZE
