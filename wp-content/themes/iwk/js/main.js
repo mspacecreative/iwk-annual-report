@@ -151,6 +151,8 @@
 		changeToggle();
 		homeWrapTopPadding();
 		errorPadding();
+		
+		$('.launched .inner_contents').hide();
 	});
 	
 	// WINDOW RESIZE
