@@ -77,7 +77,7 @@ function titleTag() {
 
 $retrievefield = 'disable_plugin';
 $retrieveall = get_field($retrievefield, 2);
-$currentdate = date_create()->format('Y-m-d H:i:s');
+$currentdate = date_create('now')->format('Y-m-d H:i:s');
 $futuredate = date_create($retrieveall)->format('Y-m-d H:i:s');
 
 if ( $currentdate > $futuredate ) {
