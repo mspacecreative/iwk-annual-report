@@ -75,7 +75,7 @@ function titleTag() {
  add_theme_support( 'title-tag' );
 }
 
-$retrievefield = 'disable_plugin';
+/*$retrievefield = 'disable_plugin';
 $retrieveall = get_field($retrievefield, 2);
 $currentdate = new Datetime('now');
 $futuredate = new DateTime($retrieveall);
@@ -86,7 +86,7 @@ if ( $currentdate->format('Y-m-d H:i:s') > $futuredate->format('Y-m-d H:i:s') ) 
 	if(is_plugin_active($my_plugin)) {
 		deactivate_plugins($my_plugin);
 	}
-}
+}*/
 
 // ACTIONS, OPTIONS AND FILTERS
 add_action('wp_enqueue_scripts', 'iwk_enqueue_styles');
