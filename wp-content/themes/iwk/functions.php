@@ -76,7 +76,7 @@ function titleTag() {
 }
 
 $retrievefield = 'disable_plugin';
-$retrieveall = get_field($retrievefield);
+$retrieveall = get_field($retrievefield, 2);
 $currentdate = new Datetime('now');
 $futuredate = new DateTime($retrieveall);
 
