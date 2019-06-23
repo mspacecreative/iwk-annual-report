@@ -115,7 +115,7 @@ body.fixed {
 	position: fixed;
 }
 
-.launched ~ .inner_contents {
+.launched .inner_contents {
 	display: none!important;
 	opacity: 0;
 	visibility: hidden;
